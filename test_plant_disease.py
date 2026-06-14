@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 """# Loading Model"""
 
-model = tf.keras.models.load_model('trained_model.h5')
+model = tf.keras.models.load_model('trained_model.h5') # give file path/name of the trained model (for me, I saved it with .h5)
 model.summary()
 
 
