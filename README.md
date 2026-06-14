@@ -155,7 +155,7 @@ The script will:
 ```text
 trained_model.h5
 ```
-
+*Note:* Other saving formats can be used, and accordingly change the test_plant_disease.py
 * Save training history to:
 
 ```text
