@@ -29,25 +29,26 @@ The model learns visual patterns from leaf images and predicts the most probable
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 Plant-Disease-Prediction/
 │
-├── train_plant_disease.py        # Model training pipeline
+├── Dataset/
+│   ├── train/
+│   ├── valid/
+│   └── test/
+│
 ├── test/
-│   ├── test/
-│   │   ├── sample_images...
-│   │
-│   └── test_plant_disease.py     # Single image prediction
+│   └── test_plant_disease.py
 │
-├── training_hist.json            # Training history
-├── README.md
+├── train_plant_disease.py
+├── training_hist.json
+├── requirements.txt
 ├── .gitignore
+├── README.md
 │
-└── Dataset/
-    ├── train/
-    ├── valid/
+└── trained_model.h5   (generated after training)
 ```
 
 ---
