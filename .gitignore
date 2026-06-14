@@ -1,1 +1,35 @@
-# Dataset
+# Virtual Environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# TensorBoard logs
+logs/
+
+# Temporary files
+*.tmp
+*.log
+
+# Trained model
+trained_model.keras
+
+# Training history
+training_hist.json
