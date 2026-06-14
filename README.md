@@ -99,55 +99,68 @@ Additional layers:
 
 ---
 
-## 📊 Dataset
+## Dataset
 
-The model was trained on a publicly available Plant Disease dataset containing images of healthy and diseased plant leaves.
+This project uses the **New Plant Diseases Dataset (Augmented)** containing approximately **87,000 RGB images** of healthy and diseased crop leaves across **38 disease categories**. The dataset is already organized into training and validation folders and includes a separate test directory for inference.
 
-### Dataset Characteristics
+**Dataset Source:**
 
-- 38 Classes
-- RGB Images
-- Image Size: 128 × 128
-- Multiple crop species
-- Healthy and diseased samples
+https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset?select=New+Plant+Diseases+Dataset%28Augmented%29
 
-Example crops include:
+### Dataset Structure
 
-- Apple
-- Tomato
-- Potato
-- Corn
-- Grape
-- Peach
-- Strawberry
-- Orange
-- Pepper
-- Soybean
+```text
+Dataset/
+├── train/
+├── valid/
+└── test/
+```
+
+The dataset covers multiple crops including:
+
+* Apple
+* Blueberry
+* Cherry
+* Corn
+* Grape
+* Orange
+* Peach
+* Pepper
+* Potato
+* Raspberry
+* Soybean
+* Squash
+* Strawberry
+* Tomato
+
+with a total of **38 disease and healthy plant classes**.
 
 ---
 
-## 🚀 Training
+## Training the Model
 
-Run the training pipeline:
+After downloading and extracting the dataset into the `Dataset/` directory, train the CNN model using:
 
 ```bash
 python train_plant_disease.py
 ```
 
-The script performs:
+The script will:
 
-1. Dataset loading
-2. Image preprocessing
-3. CNN model creation
-4. Model training
-5. Validation
-6. Performance evaluation
-7. Model saving
+* Load training and validation images
+* Train the CNN model
+* Evaluate performance
+* Save the trained model as:
 
-Generated outputs:
+```text
+trained_model.h5
+```
 
-- trained_model.keras
-- training_hist.json
+* Save training history to:
+
+```text
+training_hist.json
+```
 
 ---
 
@@ -164,7 +177,7 @@ image_path = "test/test/Pototato_Healthy8.JPG"
 Run:
 
 ```bash
-python test/test_plant_disease.py
+python test_plant_disease.py
 ```
 
 The script:
@@ -227,7 +240,7 @@ Tomato___Late_blight
 The trained model is saved using:
 
 ```python
-model.save("trained_model.keras")
+model.save("trained_model.h5")
 ```
 
 This allows future inference without retraining.
