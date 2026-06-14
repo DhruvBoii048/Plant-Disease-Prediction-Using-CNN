@@ -39,9 +39,7 @@ Plant-Disease-Prediction/
 │   ├── valid/
 │   └── test/
 │
-├── test/
-│   └── test_plant_disease.py
-│
+├── test_plant_disease.py
 ├── train_plant_disease.py
 ├── training_hist.json
 ├── requirements.txt
